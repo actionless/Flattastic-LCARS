@@ -145,7 +145,7 @@ GtkClutterOffscreen {
 .primary-toolbar .button:active,
 .toolbar .button:active,
 .header-bar .button:active {
-    box-shadow: inset 1px 2px alpha(@dark_shadow, 0.21);
+    /*box-shadow: inset 1px 2px alpha(@dark_shadow, 0.21);*/
 }
 
 
@@ -155,7 +155,7 @@ GtkClutterOffscreen {
 .primary-toolbar .button:active *:insensitive,
 .toolbar .button:active *:insensitive,
 .header-bar .button:active *:insensitive{
-    box-shadow: none;
+    /*box-shadow: none;*/
 }
 
 /*************
@@ -190,7 +190,7 @@ GtkAssistant .sidebar {
     text-shadow: 1px 1px 1px @button_normal_color;
     icon-shadow: 1px 1px 1px @button_normal_color;
     padding: 6px;
-    border-width: 1px;
+    border-width: 4px;
     border-style: solid;
     border-color: transparent;
     border-radius: 15px;
@@ -203,8 +203,6 @@ GtkAssistant .sidebar {
 GtkLinkButton.button:focus:hover {
     background-color: shade(@button_normal_color, 1.06);
     background-image: none;
-    text-shadow: 1px 1px 1px shade(@button_normal_color, 1.06);
-    icon-shadow: 1px 1px 1px shade(@button_normal_color, 1.06);
 }
 
 .button:active,
@@ -212,13 +210,20 @@ GtkLinkButton.button:focus:active {
     background-color: shade(@button_normal_color, 0.925);
     background-image: none;
     color: shade(@theme_selected_fg_color, 0.95);
-    text-shadow: 1px 1px 1px shade(@button_normal_color, 0.925);
-    icon-shadow: 1px 1px 1px shade(@button_normal_color, 0.925);
 }
 
 .button:active:hover {
 }
 
+.button:checked,
+GtkLinkButton.button:checked {
+    background-color: @warning_color;
+}
+
+.button:checked:hover,
+GtkLinkButton.button:checked:hover {
+    background-color: shade(@warning_color, 1.06);
+}
 
 .button:insensitive {
     background-color: shade(@button_normal_color, 1.17);
@@ -239,23 +244,17 @@ GtkLinkButton.button:focus:active {
     icon-shadow: 1px 1px 1px shade(@button_normal_color, 1.17);
 }
 
-/* default button */
-.button:focus,
-.button.default {
-    /*background-color: @theme_selected_bg_color;*/
-    color: @theme_selected_fg_color;
-    text-shadow: 1px 1px 1px @theme_selected_bg_color;
-    icon-shadow: 1px 1px 1px @theme_selected_bg_color;
-    border-width: 5px;
+.button:focus {
     border-color: @error_color;
 }
-.button:hover:focus,
+/* default button */
+.button.default {
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
+}
 .button.default:hover {
-    text-shadow: 1px 1px 1px shade(@theme_selected_bg_color, 1.11);
-    icon-shadow: 1px 1px 1px shade(@theme_selected_bg_color, 1.11);
     background-color: shade(@theme_selected_bg_color, 1.11);
 }
-.button:active:focus,
 .button.default:active {
     background-color: mix(@button_default_active_color, white, 0.083);
     color: shade(@theme_selected_fg_color, 0.95);
@@ -2373,12 +2372,13 @@ GtkComboBox.combobox-entry .button,
 .inline-toolbar.location-bar GtkToolButton:only-child > .button.flat:insensitive,
 GtkComboBox.combobox-entry .button:insensitive,
 .linked > GtkComboBox > .button:dir(ltr):insensitive {
-    border-width: 1px;
+    /*border-width: 1px;*/
     border-radius: 0;
     border-style: solid;
 }
 
 /*leftmost button */
+.linked .entry:first-child, GtkComboBox.combobox-entry .entry:first-child,
 .inline-toolbar .button:first-child,
 .inline-toolbar.toolbar .button:first-child,
 .linked .button:first-child,
@@ -2394,6 +2394,7 @@ GtkComboBox.combobox-entry .button:first-child,
 }
 
 /* rightmost button */
+.linked .entry:last-child, GtkComboBox.combobox-entry .entry:last-child,
 .inline-toolbar .button:last-child,
 .inline-toolbar.toolbar .button:last-child,
 .linked .button:last-child,
@@ -2496,7 +2497,7 @@ GtkComboBox.combobox-entry .button:last-child,
 .linked.vertical .button:active,
 .linked.vertical .button:active:hover,
 .linked.vertical .button:insensitive {
-    border-width: 1px;
+    /*border-width: 1px;*/
     border-radius: 0;
     border-color: transparent;
     border-style: solid;
@@ -2688,7 +2689,7 @@ GtkComboBox.combobox-entry .button:last-child,
 .header-bar .linked .button,
 .header-bar .linked .button:active,
 .header-bar .linked .button:insensitive {
-    border-width: 1px;
+    /*border-width: 1px;*/
     border-radius: 0;
     border-color: transparent;
     border-style: solid;
