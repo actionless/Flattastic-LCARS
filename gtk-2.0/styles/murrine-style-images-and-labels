@@ -21,11 +21,9 @@ widget_class	"*<GtkToolbar>*<GtkLabel>*" style:highest "murrinestyle"
 widget_class	"*<GtkButton>*<GtkLabel>*" style:highest "murrinestyle"
 style "text"
 {
-
 	engine "murrine" {
-textstyle = 1
-text_shade = 0.7
-}
+		#text_shade = 0.7
+	}
 }
 widget_class "*<GtkButton>*<GtkLabel>*"		style "text"
 

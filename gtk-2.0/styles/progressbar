@@ -2,8 +2,8 @@ style "progressbar" {
   
   xthickness            		= 0
   ythickness            		= 0
-	bg[NORMAL] = @bg_color
-	bg[ACTIVE] = shade (0.96, @bg_color)
+	bg[NORMAL] = @inactive_color
+	bg[ACTIVE] = shade (0.96, @inactive_color)
 	fg[PRELIGHT] = @selected_fg_color
 
   engine "murrine"

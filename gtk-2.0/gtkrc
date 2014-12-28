@@ -1,7 +1,7 @@
 /* http://nale12.deviantart.com/ */
 
 gtk-toolbar-icon-size = large-toolbar
-gtk-color-scheme = "base_color:#0d0309\nbg_color:#0d0309\ntooltip_bg_color:#656D78\nselected_bg_color:#ff9900\ntext_color:#9999ff\nfg_color:#ffcc66\ntooltip_fg_color:#ffffff\nselected_fg_color:#0d0309"
+gtk-color-scheme = "base_color:#0d0309\nbg_color:#0d0309\ntooltip_bg_color:#656D78\nselected_bg_color:#ff9900\ntext_color:#9999ff\nfg_color:#ffcc66\ntooltip_fg_color:#ffffff\nselected_fg_color:#0d0309\ninactive_color:#666699\nbutton_bg_color:#cc99cc"
 gtk-icon-sizes = "panel-menu=16,16:panel=8,8:gtk-button=16,16:gtk-large-toolbar=24,24:gtk-small-toolbar=16,16"
 #gtk-button-images	= 1
 #gtk-menu-images	= 1					
@@ -26,6 +26,7 @@ style "default"
   GtkButton::default_outside_border		= { 0, 0, 0, 0 }
   GtkButton::focus-padding                      = 0
   GtkButton::inner-border                       = {0, 0, 0, 0}
+
   #GtkButton::button-relief                      = GTK_RELIEF_NONE
   #GtkButton::displace-focus                     = 1
   #GtkButton::shadow_type                        = GTK_SHADOW_NONE

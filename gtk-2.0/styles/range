@@ -2,10 +2,12 @@ style "range"			= "default"
 {
 	xthickness = 0
 	ythickness = 0
-	bg[NORMAL] = @bg_color
-	bg[ACTIVE] = shade (0.96, @bg_color)
+
+	bg[NORMAL] = @button_bg_color
+	bg[ACTIVE] = shade (0.96, @button_bg_color)
+	bg[PRELIGHT] = shade (0.96, @button_bg_color)
 	bg[SELECTED] = @selected_bg_color
-	bg[INSENSITIVE] = shade (0.95, @bg_color)        
+	bg[INSENSITIVE] = @inactive_color
   engine "murrine"
   {
 		animation = FALSE

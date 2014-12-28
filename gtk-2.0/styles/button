@@ -1,69 +1,77 @@
 style "button" 
 {
-	xthickness = 4
-	ythickness = 7
-	fg[NORMAL] = @selected_fg_color
-	fg[PRELIGHT] = @selected_fg_color
-	fg[SELECTED] = @selected_fg_color
-	fg[ACTIVE] = @selected_fg_color
-	fg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+  xthickness = 4
+  ythickness = 7
+
+  #bg[NORMAL] = @button_bg_color
+  #bg[PRELIGHT] = shade( 0.7, @button_bg_color)
+  #bg[SELECTED] = @selected_bg_color
+  #bg[ACTIVE] = @button_bg_color
+  #bg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+
+  fg[NORMAL] = @selected_fg_color
+  fg[PRELIGHT] = @selected_fg_color
+  fg[SELECTED] = @selected_fg_color
+  fg[ACTIVE] = @selected_fg_color
+  fg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+
   engine "pixmap"
   {
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			detail			= "buttondefault"
-			file			= "Buttons/button-default.png"
-			border			= { 16, 12, 16, 12}
-			stretch			= TRUE
-		}
-    image
-    {
-      function			= BOX
-      state				= PRELIGHT
-      recolorable		= TRUE
-      shadow			= OUT
-      file				= "Buttons/button-prelight.png"
-      border			= { 12, 12, 12, 12 }
-      stretch			= TRUE
-    }
-    image
-    {
-      function			= BOX
-      state				= PRELIGHT
-      recolorable		= TRUE
-      shadow			= IN
-      file				= "Buttons/button-pressed.png"
-      border			= { 12, 12, 12, 12 }
-      stretch			= TRUE
-    }
-    image
-    {
-      function			= BOX
-      state				= ACTIVE
-      file				= "Buttons/button-pressed.png"
-      border			= { 12, 12, 12, 12 }
-      stretch			= TRUE
-    }	
-    image 
-   {
-     function			= BOX
-     state				= INSENSITIVE
-     file					= "Buttons/button-insensitive.png"
-     border			= { 12, 12, 12, 12 }
-     stretch			= TRUE
-    }
-    image 
-    {
-      function			= BOX
-      file				= "Buttons/button-normal.png"		
-      border			= { 12, 12, 12, 12 }
-      stretch			= TRUE
-     }	
+      image
+      {
+	  function = BOX
+	  recolorable = TRUE
+	  detail = "buttondefault"
+	  file = "Buttons/button-default.png"
+	  border = { 12, 12, 12, 12}
+	  stretch = TRUE
+      }
+      image
+      {
+	  function = BOX
+	  state = PRELIGHT
+	  recolorable = TRUE
+	  /*shadow = OUT*/
+	  file = "Buttons/button-prelight.png"
+	  border = { 12, 12, 12, 12 }
+	  stretch = TRUE
+      }
+      image
+      {
+	  function = BOX
+	  state = PRELIGHT
+	  recolorable = TRUE
+	  /*shadow = IN*/
+	  file = "Buttons/button-pressed.png"
+	  border = { 12, 12, 12, 12 }
+	  stretch = TRUE
+      }
+      image
+      {
+	  function = BOX
+	  state = ACTIVE
+	  file = "Buttons/button-pressed.png"
+	  border = { 12, 12, 12, 12 }
+	  stretch = TRUE
+      }  
+      image 
+       {
+	   function = BOX
+	   state = INSENSITIVE
+	   file = "Buttons/button-insensitive.png"
+	   border = { 12, 12, 12, 12 }
+	   stretch = TRUE
+      }
+      image 
+      {
+	  function = BOX
+	  file = "Buttons/button-normal.png"  
+	  border = { 12, 12, 12, 12 }
+	  stretch = TRUE
+      }  
   }
 }
-widget_class "*.<GtkButton>.*"		style "button"
-class "GtkButton"	style "button"
+widget_class "*.<GtkButton>.*"  style "button"
+class "GtkButton"  style "button"
 widget_class "*GtkToggleButton*"   style "button"
 
