@@ -307,23 +307,6 @@ row:selected:focus {
     -GtkWidget-focus-line-width: 0;
 }
 
-/*******************
- * check and radio *
- *******************/
-.check,
-.radio,
-.check:insensitive,
-.radio:insensitive {
-    border-style: none;
-
-}
-
-GtkCheckButton:hover,
-GtkCheckButton:active:hover,
-GtkCheckButton:selected,
-GtkCheckButton:selected:focus {
-    background-color: transparent;
-}
 
 /*****************
  * column-header *
@@ -417,22 +400,22 @@ GdMainIconView.content-view {
 }
 
 GtkIconView.content-view.check {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 GtkIconView.content-view.check:active {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 .content-view.view.check,
 .content-view.view.check:active {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 GtkIconView.content-view.check:prelight,
 GtkIconView.content-view.check:insensitive,
 GtkIconView.content-view.check:selected {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 /****************
@@ -1130,14 +1113,14 @@ GtkComboBox .menu .menuitem *:insensitive {
 .menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
-    border-style: none;
+    /*border-style: none;*/
     background-color: transparent;
     background-image: none;
 }
 
 .menuitem.check:active,
 .menuitem.radio:active {
-    border-style: none;
+    /*border-style: none;*/
     background-color: transparent;
 }
 
