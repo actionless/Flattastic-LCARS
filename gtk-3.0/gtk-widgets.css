@@ -947,6 +947,79 @@ GtkComboBox .menu.button:insensitive {
     color: @theme_text_color;
 }
 
+/************
+ * popovers *
+ ************/
+GtkPopover {
+    margin: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    border-color: @fg_color;
+    border-width: 1px;
+    border-style: solid;
+    background-clip: border-box;
+    background-image: none;
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+GtkPopover.background {
+    background-image: none;
+    background-color: @bg_color;
+}
+
+GtkPopover:backdrop {
+    box-shadow: none;
+}
+
+GtkPopover.osd {
+    /*box-shadow: 0 2px 7px 3px alpha(black, 0.5);*/
+}
+
+GtkPopover > .list,
+GtkPopover > .view,
+GtkPopover > .toolbar {
+    background-image: none;
+    background-color: transparent;
+}
+
+GtkPopover .list-row {
+    color: @fg_color;
+}
+
+GtkPopover .list-row:hover {
+    background-image: none;
+    color: @bg_color;
+    background-color: @theme_selected_fg_color;
+}
+
+GtkPopover .frame {
+    border: 1px solid @fg_color;
+    border-radius: 2px;
+}
+
+GtkPopover .entry {
+    background-color: @bg_color;
+    background-image: none;
+    color: @fg_color;
+}
+GtkPopover .entry:hover {
+    background-image: none;
+    color: @bg_color;
+    background-color: @theme_selected_fg_color;
+}
+
+GtkPopover.osd > .toolbar .button {
+    border-radius: 0;
+    border-width: 0;
+    background-image: none;
+    background-color: transparent;
+}
+
+GtkPopover .separator {
+    border: 0;
+    color: @fg_color;
+}
 /***********
  * menubar *
  ***********/
@@ -1109,6 +1182,62 @@ GtkModelMenuItem GtkBox GtkImage {
     padding-right: 4px;
 }
 
+GtkModelButton.button {
+    color: @fg_color;
+}
+
+
+GtkModelButton.button:focus,
+GtkModelButton.button:active:focus,
+GtkModelButton.button:checked:focus,
+GtkModelButton.button:active,
+GtkModelButton.button:checked,
+GtkModelButton.button:insensitive:insensitive,
+GtkModelButton.button:active:insensitive,
+GtkModelButton.button:checked:insensitive,
+GtkModelButton.button {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: none;
+    box-shadow: none;
+}
+
+GtkModelButton.button:backdrop,
+GtkModelButton.button:hover:backdrop,
+GtkModelButton.button:insensitive:backdrop,
+GtkModelButton.button:active:insensitive:backdrop,
+GtkModelButton.button:active:backdrop,
+GtkModelButton.button:active:hover:backdrop,
+GtkModelButton.button:active:selected:backdrop,
+GtkModelButton.button:checked:insensitive:backdrop,
+GtkModelButton.button:checked:backdrop,
+GtkModelButton.button:checked:hover:backdrop,
+GtkModelButton.button:checked:selected:backdrop {
+    text-shadow: none;
+    icon-shadow: none;
+    color: @theme_selected_fg_color;
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: none;
+    box-shadow: none;
+}
+
+GtkModelButton.button:active:hover,
+GtkModelButton.button:checked:hover,
+GtkModelButton.button:hover,
+GtkModelButton.button:selected {
+    background-image: none;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    text-shadow: none;
+    border-width: 0;
+    border-color: transparent;
+    border-radius: 2px;
+}
 /************
  * notebook *
  ************/
