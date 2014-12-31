@@ -94,4 +94,3 @@ widget_class "*<GtkButton>" style "button"
 widget_class "*GtkToggleButton*"   style "button"
 
 widget_class "*.<GtkButton>.<GtkLabel>" style "button-label"
-widget_class "*<GtkButton>*<GtkLabel>*" style:highest "button-label"
