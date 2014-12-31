@@ -511,6 +511,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     background-color: @theme_base_color;
     background-image: none;
     box-shadow: none;
+    color: @theme_text_color;
 }
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
 GtkComboBox.combobox-entry .button:insensitive {
@@ -522,6 +523,7 @@ GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus,
 GtkComboBox.combobox-entry .button:focus {
     border-color: @theme_selected_bg_color;
+    color: @theme_selected_bg_color;
 }
 GtkComboBox.combobox-entry .arrow,
 .primary-toolbar GtkComboBox.combobox-entry .arrow {
