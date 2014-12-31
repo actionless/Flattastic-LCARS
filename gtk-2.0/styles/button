@@ -1,4 +1,4 @@
-style "foo" 
+style "foo"
 {
   xthickness = 4
   ythickness = 7
@@ -69,7 +69,7 @@ style "button"
 	  file = "Buttons/button-pressed.png"
 	  border = { 12, 12, 12, 12 }
 	  stretch = TRUE
-      }  
+      }
       image 
        {
 	   function = BOX
@@ -79,12 +79,19 @@ style "button"
 	   stretch = TRUE
       }
       image 
+       {
+	   function = FOCUS
+	   file = "Buttons/button-focus.png"
+	   border = { 12, 12, 12, 12 }
+	   stretch = TRUE
+      }
+      image
       {
 	  function = BOX
-	  file = "Buttons/button-normal.png"  
+	  file = "Buttons/button-normal.png"
 	  border = { 12, 12, 12, 12 }
 	  stretch = TRUE
-      }  
+      }
   }
 }
 
