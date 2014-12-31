@@ -95,3 +95,4 @@ widget_class "*GtkToggleButton*"   style "button"
 
 widget_class "*<GtkButton>*<GtkLabel>" style "button-label"
 widget_class "*GtkToggleButton*<GtkLabel>" style "button-label"
+widget_class "*<GtkScaleButton>*<GtkLabel>" style "default"
