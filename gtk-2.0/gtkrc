@@ -549,3 +549,5 @@ include"styles/panel"
 include"styles/entry"
 
 include"styles/spin"
+
+#include"styles/workarounds"
