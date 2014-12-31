@@ -1,19 +1,35 @@
-style "button" 
+style "foo" 
 {
   xthickness = 4
   ythickness = 7
 
-  #bg[NORMAL] = @button_bg_color
-  #bg[PRELIGHT] = shade( 0.7, @button_bg_color)
-  #bg[SELECTED] = @selected_bg_color
-  #bg[ACTIVE] = @button_bg_color
-  #bg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+  bg[NORMAL] = @button_bg_color
+  bg[PRELIGHT] = shade( 0.7, @button_bg_color)
+  bg[SELECTED] = @selected_bg_color
+  bg[ACTIVE] = @button_bg_color
+  bg[INSENSITIVE] = shade (0.7, @selected_fg_color)
 
+
+  fg[NORMAL] = "#ff0000"
+  fg[PRELIGHT] = @selected_fg_color
+  fg[SELECTED] = @selected_fg_color
+  fg[ACTIVE] = @selected_fg_color
+  fg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+  engine "murrine"{}
+}
+
+style "button-label"
+{
   fg[NORMAL] = @selected_fg_color
   fg[PRELIGHT] = @selected_fg_color
   fg[SELECTED] = @selected_fg_color
   fg[ACTIVE] = @selected_fg_color
   fg[INSENSITIVE] = shade (0.7, @selected_fg_color)
+}
+style "button"
+{
+  xthickness = 4
+  ythickness = 7
 
   engine "pixmap"
   {
@@ -71,7 +87,11 @@ style "button"
       }  
   }
 }
+
 widget_class "*.<GtkButton>.*"  style "button"
-class "GtkButton"  style "button"
+#class "GtkButton"  style "button"
+widget_class "*<GtkButton>" style "button"
 widget_class "*GtkToggleButton*"   style "button"
 
+widget_class "*.<GtkButton>.<GtkLabel>" style "button-label"
+widget_class "*<GtkButton>*<GtkLabel>*" style:highest "button-label"
