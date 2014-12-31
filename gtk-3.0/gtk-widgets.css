@@ -251,7 +251,7 @@ GtkLinkButton.button:checked:hover {
 }
 
 .button:focus {
-    border-color: @error_color;
+    border-color: @focus_color;
 }
 /* default button */
 .button.default {
