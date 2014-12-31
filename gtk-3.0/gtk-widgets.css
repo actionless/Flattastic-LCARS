@@ -198,6 +198,12 @@ GtkAssistant .sidebar {
     background-image: none;
     color: @theme_selected_fg_color;
 }
+GtkToolButton .button{
+    border-radius: 3px;
+}
+GtkToolButton .button:hover{
+    border-radius: 3px;
+}
 
 .button:hover,
 GtkLinkButton.button:focus:hover {
@@ -2164,6 +2170,7 @@ GtkColorButton.button {
 
 .toolbar .button {
     padding: 2px;
+    border-radius: 3px;
 }
 
 .toolbar .button.text-button {
@@ -2529,11 +2536,13 @@ GtkComboBox.combobox-entry .button:last-child,
 .linked .button:insensitive:only-child,
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar .button:active:only-child,
-.inline-toolbar.toolbar .button:insensitive:only-child,
+.inline-toolbar.toolbar .button:insensitive:only-child { 
+    border-radius: 15px;
+}
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
-    border-radius: 15px;
+    border-radius: 3px;
 }
 
 /* linked button shadows (vertical) */
@@ -3260,6 +3269,9 @@ GtkProgressBar.osd.progressbar {
     background-image: none;
     color: @theme_selected_fg_color;
 }
+.selection-mode.toolbar GtkToolButton .button {
+    border-radius: 3px;
+}
 
 .selection-mode.header-bar .button:hover,
 .selection-mode.toolbar .button:hover,
@@ -3298,6 +3310,9 @@ GtkProgressBar.osd.progressbar {
     background-color: @button_info_color;
     background-image: none;
     color: @theme_selected_fg_color;
+}
+.selection-mode.toolbar GtkToolButton.suggested-action .button {
+    border-radius: 3px;
 }
 
 .selection-mode.header-bar .suggested-action.button:hover,
@@ -3499,3 +3514,4 @@ GtkBubbleWindow .toolbar {
     border-image: none;
     box-shadow: 0 2px 7px 1px alpha(black, 0.5);
 }
+
