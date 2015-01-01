@@ -1,7 +1,7 @@
 style "radiobutton"="default"
 {
-	fg[NORMAL] = shade (1.1, @text_color)
-	fg[ACTIVE] = @fg_color
+	fg[PRELIGHT] = shade (1.1, @fg_color)
+	fg[NORMAL] = @fg_color
   engine "pixmap" 
     {
  image 
