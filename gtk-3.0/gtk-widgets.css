@@ -1314,6 +1314,7 @@ GtkModelButton.button:selected {
     text-shadow: none;
     icon-shadow: none;
     color: @theme_text_color;
+    border-radius: 1px;
 }
 .notebook tab .button:hover {
     color: @theme_selected_fg_color;
