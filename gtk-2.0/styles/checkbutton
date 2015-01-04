@@ -3,6 +3,13 @@ style "checkbutton"="default"
 	fg[PRELIGHT] = shade (1.1, @fg_color)
 	fg[NORMAL] = @fg_color
   engine "pixmap" {
+    image
+    {
+      function			= FOCUS
+      file				= "Others/focus.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+    }	
  image 
 	{
             function        		= CHECK
@@ -90,6 +97,13 @@ style "checkbutton-menu"="default"
 
 
   engine "pixmap" {
+    image
+    {
+      function			= FOCUS
+      file				= "Others/focus.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+    }	
  image 
 	{
             function        		= CHECK
