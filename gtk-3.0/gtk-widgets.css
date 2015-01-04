@@ -223,12 +223,12 @@ GtkLinkButton.button:focus:active {
 
 .button:checked,
 GtkLinkButton.button:checked {
-    background-color: @warning_color;
+    background-color: @checked_bg_color;
 }
 
 .button:checked:hover,
 GtkLinkButton.button:checked:hover {
-    background-color: shade(@warning_color, 1.06);
+    background-color: shade(@checked_bg_color, 1.06);
 }
 
 .button:insensitive {
@@ -515,8 +515,7 @@ GtkComboBox.combobox-entry .button:insensitive {
 }
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
 GtkComboBox.combobox-entry .button:insensitive {
-    background-color: shade(@theme_bg_color, 0.95);
-    color: mix(@theme_text_color, @theme_base_color, 0.3);
+    border-color: @inactive_dark_color;
 }
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 GtkComboBox.combobox-entry .button:active,
@@ -531,7 +530,7 @@ GtkComboBox.combobox-entry .arrow,
 }
 GtkComboBox .arrow:insensitive,
 .primary-toolbar GtkComboBox .arrow:insensitive {
-    color: alpha(@theme_fg_color, 0.5);
+    color: @inactive_dark_color;
 }
 GtkComboBox .arrow,
 .primary-toolbar GtkComboBox .arrow {
@@ -573,9 +572,9 @@ GtkComboBox .button {
 }
 
 .entry:insensitive {
-    background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
     color: mix(@theme_text_color, @theme_base_color, 0.3);
+    border-color: @inactive_dark_color;
 }
 
 .entry.progressbar {
@@ -1380,7 +1379,7 @@ GtkProgressBar {
 }
 .trough,
 .trough.vertical {
-    background-color: @entry_border_color;
+    background-color: @inactive_dark_color;
     background-image: none;
 }
 
@@ -1528,7 +1527,7 @@ GtkLevelBar.vertical {
 
 .scale.trough:insensitive,
 .scale.highlight.left:insensitive {
-    background-color: @entry_border_color;
+    background-color: @inactive_dark_color;
     background-image: none;
 }
 

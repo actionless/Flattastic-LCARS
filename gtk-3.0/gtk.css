@@ -4,13 +4,14 @@
 @define-color fg_color #ffcc66;
 @define-color base_color #0d0309;
 @define-color text_color #9999ff;
-/*@define-color selected_bg_color #ff9900;*/
 /*@define-color selected_bg_color #cc99cc;*/
 @define-color selected_bg_color #cc6699;
+@define-color checked_bg_color #ff9900;
 @define-color selected_fg_color #0d0309;
 @define-color tooltip_bg_color #656D78;
 @define-color tooltip_fg_color #ffffff;
 @define-color focus_color #ff3300;
+@define-color inactive_dark_color #1d1234;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
