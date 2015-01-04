@@ -1368,13 +1368,13 @@ GtkProgressBar {
 .trough row:selected:focus {
     border-width: 0 0 4px 0;
     border-style: solid;
-    border-color: @entry_border_color;
+    border-color: @inactive_dark_color;
     background-image: none;
     border-radius: 0px;
 }
 .trough row:selected,
 .trough row:selected:focus {
-    border-color: @entry_border_color;
+    border-color: @inactive_dark_color;
 
 }
 .trough,
